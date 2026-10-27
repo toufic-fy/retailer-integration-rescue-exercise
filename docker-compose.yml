@@ -18,7 +18,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: ["python", "consumers/billing/consumer.py"]
+    command: ["python", "-m", "consumers.billing.consumer"]
+    environment:
+      PYTHONUNBUFFERED: "1"
     depends_on:
       rabbitmq:
         condition: service_healthy
@@ -30,7 +32,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: ["python", "consumers/delivery/consumer.py"]
+    command: ["python", "-m", "consumers.delivery.consumer"]
+    environment:
+      PYTHONUNBUFFERED: "1"
     depends_on:
       rabbitmq:
         condition: service_healthy
@@ -42,7 +46,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: ["python", "consumers/crm/consumer.py"]
+    command: ["python", "-m", "consumers.crm.consumer"]
+    environment:
+      PYTHONUNBUFFERED: "1"
     depends_on:
       rabbitmq:
         condition: service_healthy
@@ -57,6 +63,8 @@ services:
     depends_on:
       rabbitmq:
         condition: service_healthy
+    environment:
+      PYTHONUNBUFFERED: "1"
     volumes:
       - .:/app
       - ./events:/events
