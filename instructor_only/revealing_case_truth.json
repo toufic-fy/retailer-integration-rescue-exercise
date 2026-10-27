@@ -1,0 +1,17 @@
+{
+  "orderId": "ORD-451",
+  "buyerContact": {
+    "id": "C-42",
+    "name": "Lina Haddad",
+    "marketingConsent": "opted_out"
+  },
+  "billingParty": {
+    "accountName": "Haddad Trading SAL",
+    "invoiceAddress": "Dora"
+  },
+  "delivery": {
+    "recipientName": "Nour Haddad",
+    "deliveryAddress": "University campus"
+  },
+  "accountStatus": "active"
+}

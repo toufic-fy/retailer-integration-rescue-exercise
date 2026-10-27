@@ -1,0 +1,24 @@
+# Ignore workshop docs folder for now
+docs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Environment and local settings
+.env
+.env.*
+.vscode/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Docker/runtime logs
+*.log

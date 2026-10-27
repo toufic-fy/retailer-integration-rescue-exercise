@@ -1,0 +1,12 @@
+{
+  "eventType": "OrderPlaced",
+  "orderId": "ORD-451",
+  "customer": {
+    "id": "C-42",
+    "name": "Lina Haddad",
+    "address": "Hamra, Beirut",
+    "status": "active"
+  },
+  "acceptedTotal": 810.0,
+  "currency": "USD"
+}
